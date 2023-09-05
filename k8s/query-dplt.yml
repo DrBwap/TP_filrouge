@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: query-dplt
+spec:
+  selector:
+    matchLabels:
+      app: myquery
+  template:
+    metadata:
+      labels:
+        app: myquery
+    spec:
+      containers:
+      - name: query-dplt
+        image: query
+        ports:
+        - containerPort: 80
+        imagePullPolicy: Never

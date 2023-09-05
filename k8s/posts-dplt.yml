@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: posts-dplt
+spec:
+  selector:
+    matchLabels:
+      app: myposts
+  template:
+    metadata:
+      labels:
+        app: myposts
+    spec:
+      containers:
+      - name: posts-dplt
+        image: posts
+        ports:
+        - containerPort: 80
+        imagePullPolicy: IfNotPresent

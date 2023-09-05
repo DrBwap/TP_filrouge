@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: event-bus-dplt
+spec:
+  selector:
+    matchLabels:
+      app: myeventbus
+  template:
+    metadata:
+      labels:
+        app: myeventbus
+    spec:
+      containers:
+      - name: event-bus-dplt
+        image: event-bus
+        ports:
+        - containerPort: 80
+        imagePullPolicy: IfNotPresent

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: moderation-dplt
+spec:
+  selector:
+    matchLabels:
+      app: mymoderation
+  template:
+    metadata:
+      labels:
+        app: mymoderation
+    spec:
+      containers:
+      - name: moderation-dplt
+        image: moderation
+        ports:
+        - containerPort: 80
+        imagePullPolicy: Never

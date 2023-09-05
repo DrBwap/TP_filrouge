@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-dplt
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: myclient
+  template:
+    metadata:
+      labels:
+        app: myclient
+    spec:
+      containers:
+      - name: client-dplt
+        image: client
+        ports:
+        - containerPort: 80
+        imagePullPolicy: IfNotPresent 

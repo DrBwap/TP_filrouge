@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: comments-dplt
+spec:
+  selector:
+    matchLabels:
+      app: mycomments
+  template:
+    metadata:
+      labels:
+        app: mycomments
+    spec:
+      containers:
+      - name: comments-dplt
+        image: comments
+        ports:
+        - containerPort: 80
+        imagePullPolicy: IfNotPresent
