@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: comments.srv
+  name: comments-srv
 spec:
   selector:
     app: mycomments
