@@ -15,6 +15,14 @@ Ce projet est une application microservices construite avec Node.js et React. Il
 - [Installation](#installation)
 - [Déploiement](#déploiement)
 
+
+
+
+
+
+
+
+
 ## Architecture
 
 L'application est composée des services suivants :
