@@ -15,5 +15,5 @@ spec:
       - name: posts-dplt
         image: posts
         ports:
-        - containerPort: 80
+        - containerPort: 4000
         imagePullPolicy: IfNotPresent

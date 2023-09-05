@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: query-srv
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: myquery
   ports:
   - name: myquery
     protocol: TCP
     port: 4002
-    targetPort: 80
+    targetPort: 4002

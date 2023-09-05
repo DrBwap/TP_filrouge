@@ -15,5 +15,5 @@ spec:
       - name: query-dplt
         image: query
         ports:
-        - containerPort: 80
-        imagePullPolicy: Never
+        - containerPort: 4002
+        imagePullPolicy: IfNotPresent

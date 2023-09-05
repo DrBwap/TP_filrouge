@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: event-bus-srv
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: myevent
   ports:
   - name: myevent
     protocol: TCP
     port: 4005
-    targetPort: 80
+    targetPort: 4005

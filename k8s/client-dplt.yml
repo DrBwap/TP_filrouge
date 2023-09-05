@@ -16,5 +16,5 @@ spec:
       - name: client-dplt
         image: client
         ports:
-        - containerPort: 80
+        - containerPort: 3000
         imagePullPolicy: IfNotPresent 

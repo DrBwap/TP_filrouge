@@ -3,11 +3,11 @@ kind: Service
 metadata:
   name: moderation-srv
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: mymoderation
   ports:
   - name: mymoderation
     protocol: TCP
     port: 4003
-    targetPort: 80
+    targetPort: 4003

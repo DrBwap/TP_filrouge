@@ -10,4 +10,4 @@ spec:
   - name: mycomments
     protocol: TCP
     port: 4001
-    targetPort: 80
+    targetPort: 4001

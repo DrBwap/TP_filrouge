@@ -15,5 +15,5 @@ spec:
       - name: moderation-dplt
         image: moderation
         ports:
-        - containerPort: 80
-        imagePullPolicy: Never
+        - containerPort: 4003
+        imagePullPolicy: IfNotPresent

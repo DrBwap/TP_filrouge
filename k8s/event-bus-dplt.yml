@@ -15,5 +15,5 @@ spec:
       - name: event-bus-dplt
         image: event-bus
         ports:
-        - containerPort: 80
+        - containerPort: 4005
         imagePullPolicy: IfNotPresent

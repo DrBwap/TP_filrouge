@@ -15,5 +15,5 @@ spec:
       - name: comments-dplt
         image: comments
         ports:
-        - containerPort: 80
+        - containerPort: 4001
         imagePullPolicy: IfNotPresent
