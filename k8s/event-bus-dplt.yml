@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: event-bus-dplt
-        image: drbwap/event-bus:latest
+        image: event-bus
+        #image: drbwap/event-bus:latest
         imagePullPolicy: IfNotPresent
         resources:
           limits:

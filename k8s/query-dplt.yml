@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: query-dplt
-        image: drbwap/query:latest
+        image: query
+        #image: drbwap/query:latest
         imagePullPolicy: IfNotPresent
         resources:
           limits:

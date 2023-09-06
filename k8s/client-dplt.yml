@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: client-dplt
-        image: drbwap/client:latest   #appelle l'image sur mon dockerhub (marche aussi avec "client")
+        image: client
+        #image: drbwap/client:latest   #appelle l'image sur mon dockerhub (marche aussi avec "client")
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 3000

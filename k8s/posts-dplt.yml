@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: posts-dplt
-        image: drbwap/posts:latest
+        image: posts
+        #image: drbwap/posts:latest
         imagePullPolicy: IfNotPresent
         resources:
           limits:
