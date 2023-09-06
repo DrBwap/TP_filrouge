@@ -15,10 +15,6 @@ spec:
       containers:
       - name: event-bus-dplt
         image: event-bus
-        resources:
-          limits:
-            memory: "1536Mi"
-            cpu: "500m"
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 4005
-        imagePullPolicy: IfNotPresent

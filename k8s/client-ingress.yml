@@ -13,37 +13,28 @@ spec:
   - host: localhost
     http:
       paths:
-      - pathType: ImplementationSpecific #on utilise des regex
+      - pathType: Prefix #on utilise des regex
         path: /?(.*)  #on utilise donc un regex dans l'adresse
         backend:
           service:
             name: client-srv
             port: 
               number: 3000
-  - host: localhost
-    http:
-      paths:
-      - pathType: ImplementationSpecific
+      - pathType: Prefix
         path: /posts/?(.*)/comments
         backend:
           service:
             name: comments-srv
             port: 
               number: 4001
-  - host: localhost
-    http:
-      paths:
-      - pathType: ImplementationSpecific
+      - pathType: Prefix
         path: /posts/create
         backend:
           service:
             name: posts-clusterip-srv
             port: 
               number: 4000
-  - host: localhost
-    http:
-      paths:
-      - pathType: ImplementationSpecific
+      - pathType: Prefix
         path: /posts
         backend:
           service:

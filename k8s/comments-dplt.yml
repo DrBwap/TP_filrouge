@@ -14,11 +14,7 @@ spec:
     spec:
       containers:
       - name: comments-dplt
+        imagePullPolicy: IfNotPresent
         image: comments
-        resources:
-          limits:
-            memory: "1536Mi"
-            cpu: "500m"
         ports:
         - containerPort: 4001
-        imagePullPolicy: IfNotPresent

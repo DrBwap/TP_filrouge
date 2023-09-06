@@ -17,7 +17,7 @@ spec:
         image: query
         resources:
           limits:
-            memory: "1536Mi"
+            memory: "256Mi"
             cpu: "500m"
         ports:
         - containerPort: 4002
