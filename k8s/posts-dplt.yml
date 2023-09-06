@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: posts-dplt
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: myposts

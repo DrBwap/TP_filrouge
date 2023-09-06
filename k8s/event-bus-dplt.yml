@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: event-bus-dplt
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: myeventbus

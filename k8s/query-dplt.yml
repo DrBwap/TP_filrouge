@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: query-dplt
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: myquery
