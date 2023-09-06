@@ -15,6 +15,10 @@ spec:
       containers:
       - name: posts-dplt
         image: posts
+        resources:
+          limits:
+            memory: "1536Mi"
+            cpu: "500m"
         ports:
         - containerPort: 4000
         imagePullPolicy: IfNotPresent

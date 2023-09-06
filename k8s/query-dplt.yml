@@ -15,6 +15,10 @@ spec:
       containers:
       - name: query-dplt
         image: query
+        resources:
+          limits:
+            memory: "1536Mi"
+            cpu: "500m"
         ports:
         - containerPort: 4002
         imagePullPolicy: IfNotPresent

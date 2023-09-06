@@ -15,6 +15,10 @@ spec:
       containers:
       - name: moderation-dplt
         image: moderation
+        resources:
+          limits:
+            memory: "1536Mi"
+            cpu: "500m"
         ports:
         - containerPort: 4003
         imagePullPolicy: IfNotPresent
