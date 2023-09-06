@@ -5,9 +5,9 @@ metadata:
 spec:
   type: ClusterIP
   selector:
-    app: myevent
+    app: myeventbus
   ports:
-  - name: myevent
+  - name: myeventbus
     protocol: TCP
     port: 4005
     targetPort: 4005
