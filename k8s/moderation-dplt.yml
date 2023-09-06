@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: moderation-dplt
-        image: moderation
+        image: drbwap/moderation:latest
         imagePullPolicy: IfNotPresent
         resources:
           limits:

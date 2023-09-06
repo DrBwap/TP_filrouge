@@ -14,7 +14,11 @@ spec:
     spec:
       containers:
       - name: posts-dplt
-        image: posts
+        image: drbwap/posts:latest
         imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
         ports:
         - containerPort: 4000
