@@ -225,7 +225,32 @@ Si vous modifiez ces noms, assurez-vous également de mettre à jour les référ
 
 4. Création de l'Ingress :
     On est toujours dans le dossier k8s.
+    On crée un fichier Ingress unique, ingress.yml par exemple.
+    Il y aura 4 sections, pour posts, client, comments et query:
 
+            apiVersion: networking.k8s.io/v1
+            kind: Ingress
+            metadata:
+              name: myingress
+              labels:
+                name: myingress
+              annotations:
+                kubernetes.io/ingress.class: nginx
+                nginx.ingress.kubernetes.io/use-regex: "true" #pour pouvoir utiliser des regex dans les adresses
+
+
+            spec:
+              rules:
+              - host: <Host>  #remplacer <Host> par localhost
+                http:   #On va répéter la partie ci-dessous (de paths: à number: pour autant de service nécessaire, présent dans la partie chemin d'Ingress (il y en aura quatre))
+                  paths:    
+                  - pathType: Prefix
+                    path: "/" #on remplace "/" par le path du service associé, dans la partie chemin d'Ingress: pour client on a /?(.*)
+                    backend:
+                      service:
+                        name: <Service> #remplacer <Service> par le metadata: name: du service associé. Pour client-srv.yml, on aura client-srv.
+                        port: 
+                          number: <Port> #remplacer <Port> par le port du service associé. Pour client-srv.yml, on aura 3000
 
 
 5. Déployez les services sur Kubernetes :
